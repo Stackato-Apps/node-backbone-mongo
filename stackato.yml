@@ -1,4 +1,4 @@
-name: todomvc-node-mongo
+name: node-backbone-mongo
 
 mem: 128M
 
