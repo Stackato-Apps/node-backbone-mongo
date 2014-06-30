@@ -8,4 +8,4 @@ framework:
 services:
   todos: mongodb
 
-ignores: ['node_modules', '.git']
+ignores: [node_modules, .git]
