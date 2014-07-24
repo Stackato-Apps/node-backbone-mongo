@@ -2,9 +2,6 @@ name: node-backbone-mongo
 
 mem: 128M
 
-framework:
-  type: node
-
 services:
   todos: mongodb
 
