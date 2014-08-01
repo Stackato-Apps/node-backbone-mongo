@@ -1,0 +1,10 @@
+applications:
+- name: node-backbone-mongo
+  mem: 128M
+  services:
+    todos:
+      type: mongodb
+  stackato:
+    ignores:
+    - node_modules
+    - .git

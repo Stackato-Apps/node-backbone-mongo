@@ -1,8 +1,0 @@
-name: node-backbone-mongo
-
-mem: 128M
-
-services:
-  todos: mongodb
-
-ignores: [node_modules, .git]
