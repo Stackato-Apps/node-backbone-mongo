@@ -3,23 +3,27 @@ var express = require('express')
   , mongoose = require('mongoose')
   , models = require('./models')
   , routes = require('./routes')
-  , app = express();
+  , app = express()
+  , env = process.env.NODE_ENV || 'development'
+  , errorhandler = require('errorhandler')
+  , bodyParser = require('body-parser')
+  , methodOverride = require('method-override')
+  , morgan = require('morgan');
 
-app.configure(function () {
-  app.set('views', __dirname + '/views');
-  app.set('view engine', 'jade');
-  app.use(express.favicon());
-  app.use(express.logger('dev'));
-  app.use(require('stylus').middleware({ src: __dirname + '/public' }));
-  app.use(express.static(__dirname + '/public'));
-  app.use(express.bodyParser());
-  app.use(express.methodOverride());
-  app.use(app.router);
-});
+app.set('views', __dirname + '/views');
+app.set('view engine', 'jade');
+app.use(morgan('combined'));
+app.use(require('stylus').middleware({ src: __dirname + '/public' }));
+app.use(express.static(__dirname + '/public'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+  extended: false
+}));
+app.use(methodOverride());
 
-app.configure('development', function () {
-  app.use(express.errorHandler());
-});
+if (env == 'development') {
+  app.use(errorhandler());
+}
 
 routes.init(app);
 
