@@ -122,7 +122,7 @@
     app.post(path, getCreateController(model));
     app.get(pathWithId, getReadController(model));
     app.put(pathWithId, getUpdateController(model));
-    app.del(pathWithId, getDeleteController(model));
+    app.delete(pathWithId, getDeleteController(model));
   };
 
 }(exports));
