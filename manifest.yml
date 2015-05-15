@@ -1,5 +1,6 @@
 applications:
 - name: node-backbone-mongo
+  buildpack: https://github.com/ActiveState/nodejs-buildpack
   mem: 128M
   services:
     todos:
