@@ -45,11 +45,11 @@ $ node app
 ```
 6. Visit [http://localhost:3000](http://localhost:3000) in a web browser.
 
-## Running the demo on Stackato
+## Running the demo on HPE Helion Stackato
 
 1. stackato push -n
 
-Make sure you are pushing to a Stackato cluster that has the mongodb service enabled.
+Make sure you are pushing to an HPE Helion Stackato cluster that has the mongodb service enabled.
 
 ## Credit
 
