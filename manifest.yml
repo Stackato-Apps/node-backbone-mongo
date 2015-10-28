@@ -1,6 +1,6 @@
 applications:
 - name: node-backbone-mongo
-  mem: 128M
+  memory: 128M
   services:
     todos:
       type: mongodb
