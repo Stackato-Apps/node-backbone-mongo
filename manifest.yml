@@ -1,7 +1,7 @@
 applications:
 - name: node-backbone-mongo
   docker_image: stackatoapps/node-backbone-mongo:latest
-  mem: 128M
+  memory: 128M
   services:
     todos:
       type: mongodb
