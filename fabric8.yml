@@ -1,0 +1,13 @@
+---
+pipeline: "workflows/node/CanaryReleaseStageAndApprovePromote/Jenkinsfile"
+buildName: "node-backbone-mongo2"
+codeReview: false
+links:
+  Job: "http://jenkins.jml.10.10.163.6.xip.io/job/node-backbone-mongo2"
+  Production: "http://fabric8.jml.10.10.163.6.xip.io/kubernetes/pods?namespace=node-backbone-mongo2-production"
+  Room: "http://letschat.jml.10.10.163.6.xip.io/#!/room/569fdae5adf0021500b60a8c"
+  Staging: "http://fabric8.jml.10.10.163.6.xip.io/kubernetes/pods?namespace=node-backbone-mongo2-staging"
+environments:
+  Staging: "node-backbone-mongo2-staging"
+  Production: "node-backbone-mongo2-production"
+useLocalFlow: true
