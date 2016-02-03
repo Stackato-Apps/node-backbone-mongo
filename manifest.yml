@@ -1,9 +1,11 @@
 applications:
 - name: node-backbone-mongo
+  buildpack: https://github.com/cloudfoundry/nodejs-buildpack#v1.5.5
   memory: 128M
   services:
     todos:
       type: mongodb
+  stack: cflinuxfs2
   stackato:
     ignores:
     - node_modules
