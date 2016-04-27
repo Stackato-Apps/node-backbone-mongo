@@ -8,7 +8,7 @@
     },
     "dependencies": {
         "express": "4.10.6",
-        "jade": "*",
+        "pug": "2.0.0-alpha6",
         "mongoose": "*",
         "stylus": "*",
         "body-parser": "1.10.0",
@@ -17,6 +17,6 @@
         "morgan": "1.5.1"
     },
     "engines": {
-        "node": "0.10.x"
+        "node": "0.12.x"
     }
 }

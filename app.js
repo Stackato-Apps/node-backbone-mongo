@@ -11,7 +11,7 @@ var express = require('express')
   , morgan = require('morgan');
 
 app.set('views', __dirname + '/views');
-app.set('view engine', 'jade');
+app.set('view engine', 'pug');
 app.use(morgan('combined'));
 app.use(require('stylus').middleware({ src: __dirname + '/public' }));
 app.use(express.static(__dirname + '/public'));
